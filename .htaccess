@@ -1,0 +1,7 @@
+DirectoryIndex index.php
+php_value max_execution_time 60
+RewriteEngine on
+RewriteRule ^home/? index.php [L]
+RewriteRule ^menu/? index.php?content=menu [L]
+RewriteRule ^test/? index.php?content=test [L]
+AddDefaultCharset windows-1251

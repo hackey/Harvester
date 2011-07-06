@@ -1,0 +1,155 @@
+/* ---------------------------------------------------- reset.css ---------------------------------------------------- */
+html, body, div, span, h1, h2, h3, h4, h5, h6, p, em, img, strong, sub, sup, b, u, i,  dl, dt, dd, ol, ul, li, fieldset, form, label {margin: 0;padding: 0;border: 0;outline: 0;vertical-align: baseline;background: transparent;font-size: 100%;}
+a {margin:0;padding:0;font-size:100%;vertical-align:baseline;background:transparent;}
+table {border-collapse: collapse;border-spacing: 0;outline: 0;vertical-align: baseline;background: transparent;font-size: 100%;}
+td, td img {vertical-align: top;} 
+input, select, button, textarea {margin: 0;font-size: 100%;}
+input[type="text"], input[type="password"], textarea {padding: 0;}
+input[type="checkbox"] {vertical-align: text-bottom;}
+input[type="radio"] {vertical-align: text-bottom;}
+
+/* ---------------------------------------------------- базовые настройки ---------------------------------------------------- */
+html {overflow: auto;}
+body {line-height: 1;background:#f6f6f6;text-align: left;font: 12px Arial, "Helvetica CY", "Nimbus Sans L", sans-serif;}
+textarea {font-family: Arial, "Helvetica CY", "Nimbus Sans L", sans-serif;}
+label, input[type="button"], input[type="submit"], button {cursor: pointer;}
+a, a:visited {color: #36C;text-decoration: underline;}
+a:hover {color: #CC0000;text-decoration: none;}
+a:focus, a:active {color: #36C!important;text-decoration: underline;}
+h1, h2, h3, h4, h5, h6 {text-align:center;color: #444;margin:10px 0px;}
+ 
+/* ---------------------------------------------------- глобальные настройки ---------------------------------------------------- */
+.clear{clear:left;text-align:left;}
+.inputSubmit{text-align:center;cursor: pointer;background-color:#444;color:#fff;}
+.inputSubmit:hover {color:#aaa;}
+div.main_center {margin:0px auto;width:960px;}
+.message{margin:0px auto;font-weight:bold;text-align: right;position: relative;clear: both;width: 960px;color:green;}
+.message_error{margin:0px auto;font-weight:bold;text-align: right;position: relative;clear: both;width: 960px;color:red;}
+.modal, .window { border: solid 1px #ccc; position: absolute;display: none;background: #eee;padding: 15px;margin: 15px;-webkit-box-shadow: 3px 4px 3px rgba(0, 0, 0, 0.25);-moz-box-shadow: 3px 4px 3px rgba(0, 0, 0, 0.25);box-shadow: 3px 4px 3px rgba(0, 0, 0, 0.25)}
+.window {position: fixed;}
+.title_modal {height: 16px;background: #222;margin: 2px;}
+.title_text {float: left;color: #AAA;padding: 1px 4px;}
+.title_modal_icon {width:14px;height:14px;display:block;background: url(../images/ui-icons_888888_256x240.png) no-repeat;background-position: -32px -192px;float: right;margin: 0px 4px;}
+.window2{padding: 15px;}
+#loading {background: url(../images/elem.gif) no-repeat;width:16px;height:16px;}
+/* ---------------------------------------------------- main css ----------------------------------------------------  */
+
+div.main_ris {background: url(../images/text.png) no-repeat;width:765px;height:76px;margin:0 auto;}
+div.body_down{text-align: center;font-size: 14px;}
+.copyright{text-align:center;}
+/* ---------------------------------------------------- header css ----------------------------------------------------  */
+.header_dialog-overlay {width:100%;height:100%;filter:alpha(opacity=50);-moz-opacity:0.5;-khtml-opacity: 0.5;opacity: 0.5;background:#000;position:absolute;top:0;left:0;z-index:3000;display:none;}
+.header_dialog-box {-webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);-moz-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);-moz-border-radius: 5px;
+-webkit-border-radius: 5px;background:#eee;width: 300px;position:absolute;z-index:5000;display:none;}
+ .header_dialog-box .header_dialog-content {text-align:left;padding:5px;margin:13px;color:#666;font-family:verdana;font-size:11px;}
+.main_header{margin:0px auto;width:960px;height: 102px;}
+.header_view{padding: 0px;margin: 0px auto;width: 100%;text-align: left;}
+.header_parent {height:73px;margin: 0px;background: -webkit-radial-gradient(black 15%, transparent 16%) 0 0, -webkit-radial-gradient(black 15%, transparent 16%) 8px 8px, -webkit-radial-gradient(rgba(255, 255, 255, .1) 15%, transparent 20%) 0 1px, -webkit-radial-gradient(rgba(255, 255, 255, .1) 15%, transparent 20%) 8px 9px;
+background-color: #282828;
+background-size: 14px 14px;}
+.header_child {background: url(../images/logo.png) no-repeat;margin:0px 0px 0px 60px;width:247px;height:102px;float:left;}
+.header_ico{float: right;margin: 25px;}
+.ico {display: block;float: left;width:24px;height:24px;background: url(../images/ico.png);margin-right:10px;}
+.home:hover {background-position: -24px 0;}
+.loginOFF { background-position: -48px 0;}
+.loginOFF:hover { background-position: -72px 0;}
+.loginON { background-position: -72px 0;}
+.loginON:hover { background-position: -48px 0;}
+.menu { background-position: -144px 0;}
+.menu:hover { background-position: -168px 0;}
+a.header_button {background-position: -96px 0;position:absolute;top: 10px;right: 5px;}
+ a.header_button:hover {background-position: -120px 0;} 
+.header_user{vertical-align: middle;vertical-align: middle;color: #AAA;font-weight: bold;}
+
+ /* ---------------------------------------------------- menu css  ---------------------------------------------------- */
+
+.menu_center {width: 850px;margin: 0px auto;}
+.menu_fieldset {border: 1px solid #aaa;margin:15px 0px;padding:15px;}
+.menu1 {width: 350px;float: left;}
+.menu1 li {list-style: none;padding: 2px 0px;}
+.menu2, .menu3 {float: right;width: 400px;}
+.menu_legend {font-weight:bold;color: #111;padding:5px 10px}
+.menu_fieldset a {text-decoration: none;}
+.menu_fieldset a:hover {text-decoration: underline;}
+.menu_admin1{width:150px;float:left;}
+.menu_admin1 input{width:150px;}
+.menu_admin1 input.inputSubmit{width:154px;}
+.menu_admin2{width:150px;float:right;}
+#comp_create input {width: 129px;}
+.but_create{width: 133px;margin:2px 0px;}
+.but_reboot{width: 154px;margin:2px 0px;}
+.menu_fieldset select#list_comp, .menu_fieldset select#list_otdel, .menu_fieldset .but_delete{margin:2px 0px;width: 318px;}
+p.menu_online {margin-top: 15px;}
+
+/* ---------------------------------------------------- table view css ----------------------------------------------------  */
+th {padding:2px 0px;}
+ 
+  /* ---------------------------------------------------- edit css  ---------------------------------------------------- */
+.edit_td {background: #eee;float:left;padding: 5px;margin: 2px 2px 0px 0px;border:1px solid #333;}
+.edit_view {width: 700px;float:right;padding:20px;border:1px solid #999;margin:20px 0px;}
+.edit_legend{font-size: 14px;font-weight:bold;background: #333;color: #aaa;margin:10px 0px;padding:2px;}
+.edit_podlegend{background: #aaa;color: #333;margin:10px 0px;}
+.edit_menu {position: relative;width: 150px;float: right;padding: 15px;border: 1px solid #999;margin: 20px 0px 0px 5px;}
+.edit_menu li{list-style:none;margin:2px 0px;}
+.edit_menu li a{text-decoration: none;}
+.edit_menu li a:hover{text-decoration: underline;}
+.edit_menu_li_div{margin:15px 0px;}
+.edit_menu input{margin: 5px 0px;}
+.edit_row_view {float: left;width: 680px;height:16px;margin:0px 0px 2px 20px;}
+._edit_even {background:#ddd;}
+.edit_row_name{width:180px;float: left;}
+.edit_row_value{width: 480px;float: left;}
+.edit_row_input{width: 480px;float: left;border: 1px solid #AAA;padding: 0px;margin: 0px;}
+.edit_row_input:focus{color: red;border: 1px solid #000;outline:none;background-color:#fff;}
+.edit_row_view .edit_tag {float: right;width:16px;height:16px;background:url(../images/tag.png);cursor: pointer;}
+
+/* ---------------------------------------------------- workPlace css  ---------------------------------------------------- */
+.wk_selection {color:#000;}
+.wk_head_text {width: 150px;float:left;margin:15px 0px  0px;}
+.wk_box {float:left;margin:15px 25px  15px 0px}
+.wk_value_text {border-bottom:1px solid #666;text-align:center;}
+.wk_value {font-size: 80%; text-align:center;}
+.border{border-bottom: 1px solid #ddd}
+.wk_fieldset {border: 1px solid #555;margin:5px 0px;padding:0 15px;}
+.wk_legend {background: #333;color: #aaa}
+
+/* ---------------------------------------------------- wmi  css ----------------------------------------------------  */
+.wmi_view_fieldset {margin:15px 0px;border: 1px solid #333;width:445px;padding:10px;float:right;}
+.wmi_view_left {float:left;}
+.wmi_fieldset {margin:5px 0px;padding:15px;}
+.wmi_legend {background: #333;color: #aaa;width:419px;}
+.wmi_div_left{width: 190px;float: left;}
+
+/* ---------------------------------------------------- register  css ----------------------------------------------------  */
+.register {margin:0px auto;width:300px;}
+.register p {margin:10px 0px 0px;}
+.register_button{width:133px;}
+.reg_inp {width:133px;}
+
+/* ---------------------------------------------------- panel_admin  css ----------------------------------------------------  */
+.panel_admin_left {width:400px;margin:15px auto;border: 2px solid #999;padding:15px}
+.user_group {float:left;}
+
+/* ----------------------------------------------------Service css------Process  css  Share----------------------------------------------------  */
+#service_form span {width: 200px;}
+#service_form input, #process_form input{width: 156px;float:left;}
+.service_run {color:green;}
+.service_stop {color:red;}
+.but_service{margin:0px 2px;width:160px;float:left;}
+.but_process_stop{width:14px;}
+.share_do {float: left;width: 14px;height: 14px;text-align: center;margin-right: 10px;}
+
+/* ----------------------------------------------------online  css  ----------------------------------------------------  */
+.online {float: left;width: 100px;}
+a.bd_on {text-decoration: none!important;color: #36C;}
+a.bd_off {text-decoration: none!important;color: black;}
+a.bd_off:hover , a.bd_on:hover {text-decoration: underline!important;color: red;}
+
+/* ----------------------------------------------------get_data  css  ----------------------------------------------------  */
+.main_getdata {width: 415px;float: left;margin: 0px 30px 30px 0px;}
+.head_getdata {font-weight:bold;}
+.num_getdata{float:left;width:30px;}
+.name_getdata{float:left;width:150px;}
+.Status_getdata {float:left;}
+.online_scan {display:none;}
+.scan_b {width: 250px;margin: 0px auto;}
