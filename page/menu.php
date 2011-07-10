@@ -78,9 +78,5 @@ if(!isset($_SESSION["user"])) {
 <fieldset class="menu_fieldset menu3">
 <legend class="menu_legend">  Отчёты </legend>
 <p> <a href="index.php?content=workPlace"> Паспорт компьютера </a> </p>
-<?php if($_SESSION["user"]=="asu5") {  ?>
-	<p> <a href="index.php?content=test"> testsss </a> </p>
-	<p> <a href="index.php?content=spy"> SPY </a> </p>
-<?php }  ?>
 </fieldset>
 </div>
