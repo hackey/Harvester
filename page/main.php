@@ -11,5 +11,5 @@
 </div>
 </br>
 <div class="copyright"> 
-	2010 - <?php echo date("Y") ?>	Inventar Network beta
+	2010 - <?php echo date("Y") ?>	Harvester (beta) - сбор информации в сети 
 </div>

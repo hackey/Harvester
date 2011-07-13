@@ -1,4 +1,4 @@
-<title> Инвентаризация компьютеров ВТС</title>
+<title> Harvester </title>
 <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 <link rel="icon" href="favicon.ico" type="image/x-icon">
 <meta charset="UTF-8">

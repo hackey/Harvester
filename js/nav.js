@@ -3,6 +3,7 @@ $.ajaxSetup ({
 cache: false
 });
 function message_window (text) {
+ var window_mes= document.getElementById("window_mes");
  window_mes.innerHTML=text;
  $(".window").show(500);
  $('.window').click(function () {		
@@ -27,7 +28,7 @@ id_num+=1;
 }
 
 function create_comp_button() {
-var str = $(comp_create).serialize()
+var str = $("#comp_create").serialize()
 $("#loading").show();
 $('#sm').hide();	
 $.ajax({
@@ -92,7 +93,7 @@ $.ajax({
 }
 
 function delete_comp_button() {
-var str = $(comp_delete).serialize()
+var str = $("#comp_delete").serialize()
 $("#loading").show();
 $.ajax({
 	type: "GET",
@@ -115,7 +116,7 @@ $.ajax({
 }
 
 function reboot_comp_button() {
-var ip=$(management_form).serialize()
+var ip=$("#management_form").serialize()
 $("#loading").show();
 $.ajax({
 	type: "GET",
@@ -129,7 +130,7 @@ $.ajax({
 }
 
 function shutdown_comp_button() {
-var ip=$(management_form).serialize()
+var ip=$("#management_form").serialize()
 $("#loading").show();
 $.ajax({
 	type: "GET",
@@ -143,7 +144,7 @@ $.ajax({
 }
 
 function service_button () {
-	var ip=$(management_form).serialize()
+	var ip=$("#management_form").serialize()
 	$("#loading").show();
 	$.ajax({
 		type: "GET",
@@ -169,7 +170,7 @@ function service_button () {
 }
 
 function service_do_button (text) {
-	var ip=$(service_form).serialize()
+	var ip=$("#service_form").serialize()
 	$("#loading").show();
 	$.ajax({
 		type: "GET",
@@ -211,7 +212,7 @@ function service_do_button (text) {
 }
 
 function process_button () {
-	var ip=$(management_form).serialize()
+	var ip=$("#management_form").serialize()
 	$("#loading").show();
 	$.ajax({
 		type: "GET",
@@ -237,7 +238,7 @@ function process_button () {
 }
 
 function process_do_button (text,process_processid) {
-	var ip_process=$(process_form).serialize()
+	var ip_process=$("#process_form").serialize()
 	$("#loading").show();
 	$.ajax({
 		type: "GET",
@@ -279,7 +280,7 @@ function process_do_button (text,process_processid) {
 }
 
 function share_button () {
-	var ip=$(management_form).serialize()
+	var ip=$("#management_form").serialize()
 	$("#loading").show();
 	$.ajax({
 		type: "GET",
@@ -409,7 +410,7 @@ function refresh_wmi_button(name_comp, id_modal) {
 }
 
 function save_comp_edit_button(name_comp,notmsg) {
-	var form_data=$(data_comp).serialize()
+	var form_data=$("#data_comp").serialize()
 	if (!notmsg) {$("#loading").show();}
 	$.ajax({
 		type: "POST",

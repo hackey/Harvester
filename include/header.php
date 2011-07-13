@@ -47,6 +47,7 @@ function login() {
 <div class="main_header">
 	<div class="header_parent">
 			<div class="header_child">
+			<p>HARVESTER</p>
 			</div>
 			<div class="header_ico">
 			<a href="home" class="home ico" title="На главную"></a>
