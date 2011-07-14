@@ -7,6 +7,7 @@ if(!isset($_SESSION["user"])) {
 ?>
 <script type="text/javascript" src="js/jquery-1.6.1.min.js"></script>
 <script type="text/javascript" src="js/jquery-ui-1.8.13.custom.min.js"></script>
+
 <?php 
 if (($_GET[list_comp])=="info") {require("../include/select.php");}
 require("../include/connect.php");
@@ -157,9 +158,12 @@ if (edit.style.display == 'none') {
 		text.innerHTML = edit.value
 	}
 }
+
+$(function() {
+		$( "#tabs" ).tabs();
+});
 // ]]>-->
 </script> 
-
 
 <?php if ($_GET['list_comp'] && !$_POST['save_changes']) {
 $mas=array("Общие сведения",
@@ -176,12 +180,13 @@ $mas=array("Общие сведения",
 					); ?>
 					
 <form id="data_comp">
+<div id="tabs"> 
 <div class="edit_menu">
 	<ul>	
 	<?php 
 				$anchor=1;
 				foreach ($mas as $v) {
-						echo "<li><a href=\"#anchor".$anchor."\">".$v."</a></li>";
+						echo "<li><a href=\"#tabs-".$anchor."\">".$v."</a></li>";
 						if ($anchor==1 OR $anchor==2 OR $anchor==count($mas)) {echo "<div class=\"edit_menu_li_div\"> </div>";}
 						++$anchor;
 				} ?>
@@ -207,8 +212,8 @@ if ($_GET["wmi"]) {
 }
 $anchor=1;
 foreach ($mas as $v) {
-	echo "<a name=\"anchor".$anchor."\"></a>";
-	echo "<div class=\"edit_legend\">".$v."</div>";
+	echo "<div id=\"tabs-".$anchor."\"> 
+	<div class=\"edit_legend\">".$v."</div>";
 	
 	switch ($v) {
 		case 'Общие сведения':
@@ -242,11 +247,12 @@ foreach ($mas as $v) {
 			require_once("../edit/printer.php");
 			break;
 	}
+	
 	++$anchor;
+	echo "</div>";
 }
 ?>
-</form>
 </div>
+</div>
+</form>
 <?php } ?>
-
-
