@@ -18,10 +18,8 @@ header("Content-type: text/html; charset=windows-1251");
 </noscript>	
 <?php 
 $Headers = @get_headers("HTTP://".$_SERVER["HTTP_HOST"]."/configuration.php");
-if (!strpos($Headers[0], '200')) {
-	require_once 'installation/index.php';
-} else {
-	
+$Headers1 = @get_headers("HTTP://".$_SERVER["SERVER_ADDR"]."/".$_SERVER["HTTP_HOST"]."/configuration.php");
+if (strpos($Headers[0], '200') or strpos($Headers1[0], '200')) {
 	switch ($_GET["content"]) {
 		case 'menu';require_once 'page/menu.php';break;
 		case 'view';require_once 'page/table.php';break;
@@ -36,7 +34,9 @@ if (!strpos($Headers[0], '200')) {
 		case 'register';require_once 'page/register.php';break;
 		case 'workPlace';require_once 'reports/workPlace.php';break;
 		default: require_once 'page/main.php';break;
-	}
+	}	
+} else {	
+require_once 'installation/index.php';	
 }
 ?>
 </body>
