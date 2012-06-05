@@ -7,5 +7,7 @@
 3. Просмотр расшареных папок компьютеров в сети.
 
 ## Реализация##
-Реализовано в Web
-Использованы PHP, Mysql, JavaScript, Jquery, DataTables, JqueryUI
+Для работы нужен:
+PHP сервер на Win
+framework Yii
+Mysql
